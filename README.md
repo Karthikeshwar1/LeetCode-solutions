@@ -23,5 +23,5 @@ Solutions to problems on Leetcode
 
 # Credits:
 
-* [Reddit](https://www.reddit.com/r/coolguides/comments/gi0vyu/bigo_cheatsheet/)
+* Big-O cheat sheet: [Reddit](https://www.reddit.com/r/coolguides/comments/gi0vyu/bigo_cheatsheet/)
 
