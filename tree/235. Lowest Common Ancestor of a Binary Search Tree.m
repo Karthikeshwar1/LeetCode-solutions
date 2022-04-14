@@ -111,6 +111,38 @@ public:
 Time complexity: **O(n)**
 Space complexity: **O(h)** [where h = height of the tree, which could be O(logn) or O(n) in the worst case)
 
+Code inspired from the book [EPI](https://elementsofprogramminginterviews.com/) 
+
 <br>
 
-Code inspired from the book [EPI](https://elementsofprogramminginterviews.com/) 
+**3. Quick solution**
+
+Traversing the tree according to whether both the childs p and q are greater or lesser than the current root, leads directly to the LCA.
+
+```
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        while (root) {
+            if (p->val < root->val && root->val > q->val) {
+                root = root->left;
+            } else if (p->val > root->val && root->val < q->val) {
+                root = root->right;
+            } else {
+                return root;
+            }
+        }
+        
+        return nullptr;
+    }
+};
+```
+
+<br>
+
+Time complexity: **O(n)**
+Space complexity: **O(1)**
+
+Code inspired from [Stefan Pochmann](https://leetcode.com/StefanPochmann/)'s [solution](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/discuss/64963/3-lines-with-O(1)-space-1-Liners-Alternatives)
+
+<br>
